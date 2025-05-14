@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style1.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Comments</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/comments">Comments</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <!--Mensagens-->
+        <div class="messages">
+            {{#if messages}}
+                {{#each messages}}
+                    <div class="message">{{this}}</div>
+                {{/each}}
+            {{/if}}
+    <aside class="comments">
+        <div class="cima">
+            <form >
+                <input type="search" id="search" name="search" placeholder="Buscar o Comentário">
+                <input type="submit" class="btn-search" value="Buscar">
+            </form>
+        </div>
+    </aside>
+
+
+        {{{body}}}
+<div class="carousel-fade">
+  <div class="fade-slide"><img src="/img/img1.jpg" alt="Imagem 1"></div>
+  <div class="fade-slide"><img src="/img/img2.jpg" alt="Imagem 2"></div>
+  <div class="fade-slide"><img src="/img/img3.jpg" alt="Imagem 3"></div>
+  <div class="fade-slide"><img src="/img/img4.jpg" alt="Imagem 4"></div>
+  <div class="fade-slide"><img src="/img/img5.jpg" alt="Imagem 5"></div>
+  <div class="fade-slide"><img src="/img/img6.jpg" alt="Imagem 6"></div>
+</div>
+    </main>
+
+    <footer></footer>
+</body>
+</html>

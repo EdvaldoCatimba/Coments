@@ -1,0 +1,32 @@
+{
+  "name": "comments",
+  "version": "1.0.0",
+  "description": "Projecto",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdvaldoCatimba/Coments.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EdvaldoCatimba/Coments/issues"
+  },
+  "homepage": "https://github.com/EdvaldoCatimba/Coments#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "express-flash": "^0.0.2",
+    "express-handlebars": "^8.0.3",
+    "express-session": "^1.18.1",
+    "mysql2": "^3.14.1",
+    "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

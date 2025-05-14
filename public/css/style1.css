@@ -1,0 +1,41 @@
+.comments{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    margin: 20px 40px;
+    width: 100%;
+    background-color: transparent;
+    margin: 0 auto;
+}
+.comments div form{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    padding: 20px 40px;
+    background-color: #3d3d3d;
+}
+form input{
+    padding: 10px 20px;
+  background-color: transparent;
+  border: none;
+
+}
+
+#search{
+    border:2px solid #f6982d;
+
+}
+#search::placeholder{
+    color: white;
+}
+#search:focus{
+    outline: none;
+    border-bottom: 1px solid #f6982d;
+   
+    background-color: #333;
+}
+.btn-search{
+
+
+}
