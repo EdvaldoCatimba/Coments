@@ -8,9 +8,22 @@ const conn = require("./db/conn");
 const comments = require("./routers/comments");
 const UserRouters = require("./routers/UserRouters");
 
+const exphbs = require("express-handlebars");
+const handlebars = exphbs.create({
+  helpers: {
+    formatDate: function (date) {
+      return new Date(date).toLocaleDateString('pt-BR', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric'
+      });
+    }
+  }
+});
+
 
 //configurações do preojecto
-app.engine("handlebars", exbhbs.engine());
+app.engine("handlebars", handlebars.engine);
 app.set("view engine", "handlebars");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
@@ -38,11 +51,34 @@ const User = require("./models/User");
 const Address = require("./models/Address");
 const Comments = require("./models/Comments");
 
+//Controllers
+const UserController = require("./controllers/UserControllers");
+const CommentsController = require("./controllers/Comments");
 
 
 
-app.get("/", (req, res) => {
-  res.render("home");
+//
+
+
+
+
+
+app.get("/", async (req, res) => {
+    try {
+    const comments = await Comments.findAll({
+      include: {
+        model: User
+      }
+    });
+
+    res.render("home", {
+      comments: comments.map(comment => comment.get({ plain: true }))
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Erro ao buscar comentários");
+  }
+
 });
 app.get('/about', (req, res) => {
   res.render('about');

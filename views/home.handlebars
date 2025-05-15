@@ -7,6 +7,19 @@
         </div>
     </aside>
 
+    <div class="container-comments">
+    <h2>Comentários</h2>
+
+    {{#each comments}}
+        <div class="comment">
+            <p>{{User.name}}</p>
+            <p><strong>{{title}}</strong></p>
+            <p>{{comment}}</p>
+            <p>{{formatDate date}}</p>
+        </div>
+    {{/each}}
+</div>
+
 <div class="carousel-fade">
   <div class="fade-slide"><img src="/img/img1.jpg" alt="Imagem 1"></div>
   <div class="fade-slide"><img src="/img/img2.jpg" alt="Imagem 2"></div>
