@@ -9,6 +9,14 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.logo-cont{
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+}
 
 header{
     display: flex;
@@ -21,11 +29,13 @@ header{
     top: 0;
     left: 0;
     z-index: 1000;
+    border-bottom:1px solid #f6982d;
 }
 
 header h1{
     color: #fff;
     background-color: transparent;
+    font-size: 3em;
 }
 
 nav{
@@ -51,7 +61,7 @@ nav ul li a{
     transition: background-color 0.3s;
 }
 nav ul li a:hover{
-    background-color: #444;
+    background-color: #f6982d;
 }
 
 
@@ -105,7 +115,24 @@ nav ul li a:hover{
     justify-content: center;
     padding: 100px 20px;
     margin-top: 100px;
-
-
-
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    border-top:1px solid #f6982d;
+}
+footer p{
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+    background-color: transparent;
+}
+strong{
+    color: #f6982d;
+    background-color: transparent;
 }

@@ -1,0 +1,25 @@
+
+<div class="user">
+<button class="btn-create-user">
+    <a href="/users/create">Criar Usuário</a>
+</button>
+  {{#each users}}
+    <div class="user-card">
+      <h2>{{name}}</h2>
+      <p>Email: {{email}}</p>
+      <p>Idade: {{age}}</p>
+
+      {{#if Addresses}}
+        <h3>Endereços:</h3>
+        {{#each Addresses}}
+          <p>País: {{country}}</p>
+          <p>Província: {{city}}</p>
+          <p>Rua: {{street}}</p>
+          <hr>
+        {{/each}}
+      {{else}}
+        <p><em>Endereço não disponível.</em></p>
+      {{/if}}
+    </div>
+  {{/each}}
+</div>
